@@ -13,18 +13,13 @@ fulldate <- paste(as.Date(data$Date), data$Time)
 data$Full_Date <- as.POSIXct(fulldate)
 ## print(head(data))                used to check format comment out for run
 
-## Plot Graph of Global Active Power
-## y-axis label "Global Active Power"
-## x-axis weekdays
+## Plot Graph of Energy Sub Metering
+par(mar = c(3, 5, 2, 4),cex = 0.9)  # margin around the plot bottom,left.top,right  cex defines size of font
 
-par(mar = c(3, 5, 2, 4),cex = 0.9)  # margin around the plot bottom,left.top,right
-# par(cex.lab = 0.8 )
-# par(cex.axis = 0.8 )
-# par(cex = 0.9 )  # font size relative to current
-
+## creating plot with label
 with(data, {
   plot(Sub_metering_1~Full_Date, type="l", ylab="Energy sub metering", xlab="")
-  lines(Sub_metering_2~Full_Date,col='Red')   ## 
+  lines(Sub_metering_2~Full_Date,col='Red')    
   lines(Sub_metering_3~Full_Date,col='Blue')
 })
 
