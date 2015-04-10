@@ -31,4 +31,3 @@ legend("topright", col=c("black", "red", "blue"), lty=1, lwd=1,
 dev.copy(png, file="plot3.png", height=480, width=480)
 dev.off()  ## close plot3.png
 
-## dev.copy(png, file="plot3.png", height=480, width=640 ,units = "px", pointsize = 8,  bg = "white")
